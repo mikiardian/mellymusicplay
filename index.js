@@ -77,7 +77,7 @@ let songs = [
 	{
 	title: 'You Are Not Alone',
 	band: 'Michael Jackson',
-	src: 'songs/mj-youre',
+	src: 'songs/mj-youre.mp3',
 	img: 'images/mj.jpeg'
 	}
 ]
