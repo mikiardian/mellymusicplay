@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melly Music Player</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobileview.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <script src="index.js" defer></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/effd3867de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <!-- bottom nav bar -->
+        <nav>
+            <div class="navIcons">
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                    <p>Home</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <p>Search</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-star"></i></a>
+                    <p>Star</p>
+                </div>
+                <div class="icon">
+                    <a href="account.html"><i class="fa-solid fa-user"></i></a>
+                    <p>BACA INI</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Music Player  -->
+        <div class="musicPlayer">
+            <div class="musicImg">
+                <img class="audioImg" src="">
+            </div>
+            <div class="musicDetails">
+                <div class="titleDetails">
+                    <p class="musicTitle"></p>
+                    <p class="bandname"></p>
+                </div>
+                <div class="musicBtns">
+                    <audio id="audio" src=""></audio>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <div class="playpause">
+                        <i id="play" class="fa-solid fa-play"></i>
+                        <i id="pause" class="fa-solid fa-pause hide"></i>
+                    </div>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar  -->
+        <div class="searchContainer">
+            <i class="fa-solid fa-xmark"></i>
+            <input type="text" placeholder="Search">
+            <div class="searchHistory">
+                <p class="recentSearch">Recent Searches:</p>
+                <div class="recents">
+                    <p>Ji Chang Wook</p>
+                    <p>Miki Sayangku</p>
+                </div>
+                <p class="recentSearch">Suggested:</p>
+                <div class="recents">
+                    <p>MLTR</p>
+                    <p>Boyz II Men</p>
+                    <p>Westlife</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="mainContainer">
+            <div class="header">
+                <div class="logo">
+                    Melly Music Player
+                </div>
+                <div>
+                    <a href="#"><i class="fa-regular fa-bell"></i></a>
+                    <a href="#"><i class="fa-solid fa-gear"></i></a>
+                </div>
+            </div>
+            <div class="topLinks">
+                <div class="musicLink">Music</div>
+                <div class="podcastLink">Drakor & Artis</div>
+            </div>
+
+            <!-- first section -->
+            <div class="gridContainer">
+                <div class="grid">
+                    <img src="images/boyz.jpg">
+                    <div class="clipTitle">
+                        <p>On Bended Knee</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/mltr.jpg">
+                    <div class="clipTitle">
+                        <p>That's Why You Go</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/mltr2.jpg">
+                    <div class="clipTitle">
+                        <p>Paint My Love</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/jichang.png">
+                    <div class="clipTitle">
+                        <p>Ji Chang Wook</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/songkang.png">
+                    <div class="clipTitle">
+                        <p>Song Kang</p>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="images/guee.png">
+                    <div class="clipTitle">
+                        <p>Miki</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recently Played -->
+            <div class="showContainer">
+                <p class="showText">Melly's Favorite Music <br> [Klik & Play Album dibawah]</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/boyz.jpg" onclick="songChoice(0)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">On Bended Knee</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/mltr.jpg" onclick="songChoice(1)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">That's Why You Go</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/mltr2.jpg" onclick="songChoice(2)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Paint My Love</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/westlife.jpg" onclick="songChoice(3)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">My Love</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/bruno.jpeg" onclick="songChoice(4)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">When I Was Your Man</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/mj.jpeg" onclick="songChoice(5)">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">You Are Not Alone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- todays hits -->
+            <div class="showContainer">
+                <p class="showText">Melly's Favorite Drakor</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/worst.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">The Worst Of Evil</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/crashland.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Crash Landing On You</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/vincenzoo.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Vincenzo</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/demon.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">My Demon</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/neverthelles.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Nevertheless</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/welcomesamdal.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">Welcome to Samdal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Your Shows -->
+            <div class="showContainer">
+                <p class="showText">Melly's Favorite Actor</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/jichang.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">JI CHANG WOOK</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/songkang.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">SONG KANG</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/abe.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">ABE</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/anies.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">ANIES HAHAHA</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/cipung.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">CIPUNG</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgCon">
+                                <img src="images/guee.png">
+                            </div>
+                            <div class="showDetails">
+                                <p class="showTitle">GUEEEEEEE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
